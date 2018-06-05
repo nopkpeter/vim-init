@@ -263,6 +263,12 @@ if has('win32') || has('win64')
 	nnoremap <silent> <F8> :AsyncRun -cwd=<root> -mode=4 make run <cr>
 endif
 
+"----------------------------------------------------------------------
+" 利用<leader>+n、p、P实现标签浏览
+"----------------------------------------------------------------------
+noremap <silent> <leader>n :tn<cr>
+noremap <silent> <leader>p :tp<cr>
+noremap <silent> <leader>P :pop<cr>
 
 "----------------------------------------------------------------------
 " F3 运行当前文件：根据文件类型判断方法，并且输出到 quickfix 窗口
