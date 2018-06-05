@@ -240,8 +240,8 @@ nnoremap <F10> :call asyncrun#quickfix_toggle(6)<cr>
 " F9 编译 C/C++ 文件
 nnoremap <silent> <F9> :AsyncRun gcc -Wall -O2 "$(VIM_FILEPATH)" -o "$(VIM_FILEDIR)/$(VIM_FILENOEXT)" <cr>
 
-" F5 运行文件
-nnoremap <silent> <F5> :call ExecuteFile()<cr>
+" F3 运行文件
+nnoremap <silent> <F3> :call ExecuteFile()<cr>
 
 " F7 编译项目
 nnoremap <silent> <F7> :AsyncRun -cwd=<root> make <cr>
@@ -262,7 +262,7 @@ endif
 
 
 "----------------------------------------------------------------------
-" F5 运行当前文件：根据文件类型判断方法，并且输出到 quickfix 窗口
+" F3 运行当前文件：根据文件类型判断方法，并且输出到 quickfix 窗口
 "----------------------------------------------------------------------
 function! ExecuteFile()
 	let cmd = ''
