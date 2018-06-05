@@ -237,6 +237,9 @@ let g:asyncrun_bell = 1
 " 设置 F10 打开/关闭 Quickfix 窗口
 nnoremap <F10> :call asyncrun#quickfix_toggle(6)<cr>
 
+" F5 编译 vxWorks 驱动文件
+nnoremap <silent> <F5> :AsyncRun -raw make CPU=ARMARCH7 TOOL=gnu <cr>
+
 " F9 编译 C/C++ 文件
 nnoremap <silent> <F9> :AsyncRun gcc -Wall -O2 "$(VIM_FILEPATH)" -o "$(VIM_FILEDIR)/$(VIM_FILENOEXT)" <cr>
 
